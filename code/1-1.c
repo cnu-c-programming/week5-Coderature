@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void double_elements(int *arr, int size)
+{
+    for (int i = 0; i < size; i++) {
+        *(arr + i) = *(arr + i) * 2;
+    }
+}
+
+int main()
+{
+    int arr[5];
+
+    scanf("%d %d %d %d %d", &arr[0], &arr[1], &arr[2], &arr[3], &arr[4]);
+
+    double_elements(arr, 5);
+
+    printf("%d\n", arr[0]);
+    printf("%d\n", arr[1]);
+    printf("%d\n", arr[2]);
+    printf("%d\n", arr[3]);
+    printf("%d\n", arr[4]);
+
+    return 0;
+}
